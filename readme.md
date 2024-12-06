@@ -1,27 +1,33 @@
-# test
+# Multistation QMK VIAL Firmware
 
-![test](imgur.com image replace me!)
+![keyboard](https://i.imgur.com/Vkb3qoN.jpeg)
 
-*A short description of the keyboard/project*
+This is the firmware I used for my IBM 5556 Multistation Keyboard to convert it to USB using QMK/VIAL. This is done through the MCU swap method, replacing the keyboard controller with a Raspberry Pi Pico wired into the keyboard matrix.
 
-* Keyboard Maintainer: [test](https://github.com/test)
-* Hardware Supported: *The PCBs, controllers supported*
-* Hardware Availability: *Links to where you can find this hardware*
+* Keyboard Maintainer: maxgpdx
+* Hardware Supported: IBM 5556 Multistation keyboards with first gen PCB, Raspberry Pi Pico
+* Hardware Availability: Good luck
 
-Make example for this keyboard (after setting up your build environment):
+Wiring:
 
-    make test:default
+| Row:     | GPIO:   |  COL:   |  GPIO:  |      
+| -------- | ------- | ------- | ------- |
+| 0 | gp27 | 0 | gp6  |
+| 1 | gp28 | 1 | gp7  |
+| 2 | gp26 | 2 | gp8  |
+| 3 | gp22 | 3 | gp9  |
+| 4 | gp21 | 4 | gp10 |
+| 5 | gp20 | 5 | gp11 |
+| 6 | gp19 | 6 | gp12 |
+| 7 | gp18 | 7 | gp13 |
+|  |  | 8 | gp14 |
+|  |  | 9 | gp15 |
+|  |  | 10 | gp5 |
+|  |  | 11 | gp0 |
+|  |  | 12 | gp1 |
+|  |  | 13 | gp2 |
+|  |  | 14 | gp3 |
+|  |  | 15 | gp4 |
 
-Flashing example for this keyboard:
 
-    make test:default:flash
-
-See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
-
-## Bootloader
-
-Enter the bootloader in 3 ways:
-
-* **Bootmagic reset**: Hold down the key at (0,0) in the matrix (usually the top left key or Escape) and plug in the keyboard
-* **Physical reset button**: Briefly press the button on the back of the PCB - some may have pads you must short instead
-* **Keycode in layout**: Press the key mapped to `QK_BOOT` if it is available
+![wiring](https://i.imgur.com/7PAu3PK.jpeg)
